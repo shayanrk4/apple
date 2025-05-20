@@ -1,5 +1,5 @@
 // API-Einstellungen
-const API_KEY = "cdbde914335f42bd8b77f64e91c10e49";
+const API_KEY = "0ac1f472c69044e99502d7ca8e16881e";
 const stocks = ["AAPL", "MSFT", "TSLA", "AMZN", "GOOGL", "META", "NFLX"];
 
 // Theme Toggle
