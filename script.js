@@ -1,8 +1,6 @@
-// API-Einstellungen
 const API_KEY = "0ac1f472c69044e99502d7ca8e16881e";
 const stocks = ["AAPL", "MSFT", "TSLA", "AMZN", "GOOGL", "META", "NFLX"];
 
-// Theme Toggle
 document.getElementById("theme-toggle").addEventListener("click", () => {
     document.body.dataset.theme = document.body.dataset.theme === "dark" ? "light" : "dark";
     updateThemeButton();
@@ -13,7 +11,6 @@ function updateThemeButton() {
     btn.textContent = document.body.dataset.theme === "dark" ? "Light Mode" : "Dark Mode";
 }
 
-// API-Abfrage
 async function fetchStockData(symbol) {
     try {
         const response = await fetch(
@@ -33,7 +30,6 @@ async function fetchStockData(symbol) {
     }
 }
 
-// Chart erstellen
 function renderChart(stockData) {
     const ctx = document.getElementById("market-chart").getContext("2d");
     
@@ -59,7 +55,6 @@ function renderChart(stockData) {
     });
 }
 
-// Hauptfunktion
 async function loadStocks() {
     const container = document.getElementById("stock-container");
     container.innerHTML = "<p>Lade Daten...</p>";
